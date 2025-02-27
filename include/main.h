@@ -35,6 +35,8 @@
 #define PROS_USE_LITERALS
 
 #include "api.h"
+#include "autoFunctions.hpp"
+#include "auto.hpp"
 
 /**
  * You should add more #includes here
@@ -49,7 +51,7 @@
  * concurrently! The okapi namespace will export all symbols inside the pros
  * namespace.
  */
-// using namespace pros;
+ using namespace pros;
 // using namespace pros::literals;
 // using namespace okapi;
 
@@ -76,5 +78,15 @@ void opcontrol(void);
  */
 //#include <iostream>
 #endif
+extern pros::MotorGroup left1;
+extern pros::MotorGroup right1;
+extern pros::MotorGroup left2;
+extern pros::MotorGroup intake;
+extern pros::MotorGroup right2;
+extern pros::MotorGroup hook;
+extern pros::MotorGroup arm;
 
+extern pros::ADIDigitalOut lock;
+extern pros::ADIDigitalOut pusher;
+extern pros::Imu imu;
 #endif  // _PROS_MAIN_H_
